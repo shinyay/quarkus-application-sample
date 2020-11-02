@@ -1,6 +1,14 @@
 # Quarkus Sample Application with Database
 
-Overview
+Quarkus Sample Application with Database Integration.
+This application also implements the following features.
+
+- REST Endpoints
+- Integration with Database (H2)
+- Swagger Documentation
+- Health check
+- Basic metrics
+- Unit Test
 
 ## Description
 
