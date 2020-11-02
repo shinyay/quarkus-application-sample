@@ -11,6 +11,18 @@ This application also implements the following features.
 - Unit Test
 
 ## Description
+### Dependencies
+- quarkus-jdbc-h2
+- quarkus-jdbc-postgresql
+- quarkus-resteasy-jackson
+- quarkus-hibernate-orm-panache-kotlin
+- quarkus-smallrye-openapi
+- quarkus-smallrye-health
+- quarkus-smallrye-metrics
+- quarkus-kubernetes
+- quarkus-kubernetes-config
+- quarkus-container-image-jib"
+- quarkus-kotlin
 
 ## Demo
 
