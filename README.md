@@ -1,4 +1,4 @@
-# Name
+# Quarkus Sample Application with Database
 
 Overview
 
