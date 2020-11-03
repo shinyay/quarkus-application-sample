@@ -12,17 +12,17 @@ This application also implements the following features.
 
 ## Description
 ### Dependencies
+- quarkus-kotlin
+- quarkus-resteasy-jackson
 - quarkus-jdbc-h2
 - quarkus-jdbc-postgresql
-- quarkus-resteasy-jackson
 - quarkus-hibernate-orm-panache-kotlin
 - quarkus-smallrye-openapi
 - quarkus-smallrye-health
 - quarkus-smallrye-metrics
+- quarkus-container-image-jib"
 - quarkus-kubernetes
 - quarkus-kubernetes-config
-- quarkus-container-image-jib"
-- quarkus-kotlin
 
 ## Demo
 
