@@ -35,7 +35,7 @@ data class Employee(var firstName: String = "",
                     var organizationId: Int? = null): PanacheEntity()
 ```
 
-#### Custom ID
+#### Custom ID Entity
 Entity class should extend `PanacheEntityBase` when you want to implement your own ID.
 
 ```kotlin
@@ -46,7 +46,7 @@ data class Employee(@Id
 ```
 
 ### Repository with Panache
-Repository class extends PanacheRepository to use PanacheEntity class
+Repository class extends `PanacheRepository` to use PanacheEntity class
 
 ```kotlin
 @ApplicationScoped
@@ -54,6 +54,14 @@ class EmployeeRepository: PanacheRepository<Employee> {
 }
 ```
 
+#### Repository for Custom ID Entity
+Repository class should extend `PanacheRepositoryBase` when you deal with Custom ID entity which extends `PanacheEntityBase`
+
+```kotlin
+@ApplicationScoped
+class EmployeeRepository: PanacheRepositoryBase<Employee, Integer> {
+}
+```
 
 ## Demo
 
