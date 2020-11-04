@@ -26,7 +26,7 @@ This application also implements the following features.
 
 ### Entity
 Entity class extends `PanacheEntity` which has already defined *ID*.
-Therefore you don't have to define id field at your entity class.
+Therefore, you don't have to define id field at your entity class.
 
 ```kotlin
 @Entity
