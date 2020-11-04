@@ -24,7 +24,7 @@ This application also implements the following features.
 - quarkus-kubernetes
 - quarkus-kubernetes-config
 
-### Entity
+### Entity with Panache
 Entity class extends `PanacheEntity` which has already defined *ID*.
 Therefore, you don't have to define id field at your entity class.
 
@@ -44,6 +44,17 @@ data class Employee(@Id
                     @GeneratedValue(strategy = GenerationType.AUTO)
                     var id: Integer)
 ```
+
+### Repository with Panache
+Repository class extends PanacheRepository to use PanacheEntity class
+
+```kotlin
+@ApplicationScoped
+class EmployeeRepository: PanacheRepository<Employee> {
+}
+```
+
+
 ## Demo
 
 ## Features
