@@ -35,6 +35,9 @@ data class Employee(var firstName: String = "",
                     var organizationId: Int? = null): PanacheEntity()
 ```
 
+#### Custom ID
+Entity class should extend `PanacheEntityBase` when you want to implement your own ID.
+
 ## Demo
 
 ## Features
