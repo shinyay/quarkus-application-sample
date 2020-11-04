@@ -38,6 +38,12 @@ data class Employee(var firstName: String = "",
 #### Custom ID
 Entity class should extend `PanacheEntityBase` when you want to implement your own ID.
 
+```kotlin
+@Entity
+data class Employee(@Id
+                    @GeneratedValue(strategy = GenerationType.AUTO)
+                    var id: Integer)
+```
 ## Demo
 
 ## Features
