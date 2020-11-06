@@ -63,6 +63,9 @@ class EmployeeRepository: PanacheRepositoryBase<Employee, Integer> {
 }
 ```
 
+### Resource for JAX-RS
+Resource classes are annotated with @Path or a request method designator, such as @GET, @PUT, @POST, or @DELETE.
+
 ## Demo
 
 ## Features
