@@ -81,6 +81,24 @@ You can use JAX-RS annotation to specify HTTP Method
 fun findAll() = repository.listAll()
 ```
 
+You can use `import org.jboss.resteasy.annotations.jaxrs.PathParam` instead of JAX-RS.
+RESTEasy annotation makes you to specify value parameter without parameter for annotation.
+
+- RESTEasy annotation
+```kotlin
+    @GET
+    @Path("/{id}")
+    fun findById(@PathParam id: Long): Employee? = repository.findById(id)
+```
+
+- JAX-RS annotation
+```kotlin
+    @GET
+    @Path("/{id}")
+    fun findById(@PathParam("id") id: Long): Employee? = repository.findById(id)
+```
+
+
 ## Demo
 
 ## Features
