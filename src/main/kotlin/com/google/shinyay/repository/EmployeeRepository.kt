@@ -12,4 +12,6 @@ class EmployeeRepository: PanacheRepository<Employee> {
             list("firstName = ?1 and lastName = ?2", firstName, lastName)
 
     fun findBySalary(salary: Int) = list("salary", salary)
+
+    fun findBySalaryGreaterThan(salary: Int) = list("salary > ?1", salary)
 }
