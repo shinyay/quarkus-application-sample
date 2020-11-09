@@ -24,6 +24,23 @@ This application also implements the following features.
 - quarkus-kubernetes
 - quarkus-kubernetes-config
 
+### Database Integration
+The following dependencies are needed to connect a database (H2).
+```kotlin
+dependencies {
+    implementation("io.quarkus:quarkus-jdbc-h2")
+}
+```
+
+You should make configuration to connect to database for `application.properties`
+
+```properties
+quarkus.datasource.db-kind=h2
+quarkus.datasource.username=sa
+quarkus.datasource.password=password
+quarkus.datasource.jdbc.url=jdbc:h2:mem:testdb
+```
+
 ### Entity with Panache
 Entity class extends `PanacheEntity` which has already defined *ID*.
 Therefore, you don't have to define id field at your entity class.
