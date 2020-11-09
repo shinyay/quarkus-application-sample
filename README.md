@@ -73,6 +73,14 @@ Resource classes are annotated with @Path or a request method designator, such a
 class EmployeeResource { }
 ```
 
+#### HTTP Endpoint
+You can use JAX-RS annotation to specify HTTP Method
+
+```kotlin
+@GET
+fun findAll() = repository.listAll()
+```
+
 ## Demo
 
 ## Features
