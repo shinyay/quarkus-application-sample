@@ -28,6 +28,14 @@ This application also implements the following features.
 Entity class extends `PanacheEntity` which has already defined *ID*.
 Therefore, you don't have to define id field at your entity class.
 
+You can use `Panache` with the following dependency.
+
+```kotlin
+dependencies {
+    implementation("io.quarkus:quarkus-hibernate-orm-panache-kotlin")
+}
+```
+
 ```kotlin
 @Entity
 data class Employee(var firstName: String = "",
