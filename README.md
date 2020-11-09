@@ -133,6 +133,15 @@ RESTEasy annotation makes you to specify value parameter without parameter for a
     fun findById(@PathParam("id") id: Long): Employee? = repository.findById(id)
 ```
 
+### OpenAPI Documentation
+Quarkus can generate OpenAPI v3 specification automatically to add `SmallRye OpenAPI extension` for dependency.
+The specification is available under path `/openapi`.
+
+```kotlin
+dependencies {
+    implementation("io.quarkus:quarkus-smallrye-openapi")
+}
+```
 
 ## Demo
 
