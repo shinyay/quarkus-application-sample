@@ -71,7 +71,8 @@ data class Employee(@Id
 ```
 
 ### Repository with Panache
-Repository class extends `PanacheRepository` to use PanacheEntity class
+Repository class extends `PanacheRepository` to use PanacheEntity class.
+Then you can use basic functions like persist, deleteById or listAll.
 
 ```kotlin
 @ApplicationScoped
