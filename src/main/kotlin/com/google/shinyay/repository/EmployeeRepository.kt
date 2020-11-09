@@ -10,4 +10,6 @@ class EmployeeRepository: PanacheRepository<Employee> {
 
     fun findByFirstNameAndLastName(firstName: String, lastName: String) =
             list("firstName = ?1 and lastName = ?2", firstName, lastName)
+
+    fun findBySalary(salary: Int) = list("salary", salary)
 }
