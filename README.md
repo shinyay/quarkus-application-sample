@@ -89,6 +89,15 @@ class EmployeeRepository: PanacheRepositoryBase<Employee, Integer> {
 }
 ```
 
+#### Custom Query and Operation
+Query string shows `?1` or `?2`, which is parameters.
+The following arguments specifies each parameter.
+
+```kotlin
+fun findByFirstNameAndLastName(firstName: String, lastName: String): List<Employee> =
+           list("firstName = ?1 and lastName = ?2", firstName, lastName)
+```
+
 ### Resource for JAX-RS
 Resource classes are annotated with @Path or a request method designator, such as @GET, @PUT, @POST, or @DELETE.
 
