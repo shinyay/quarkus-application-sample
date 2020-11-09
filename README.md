@@ -143,6 +143,10 @@ dependencies {
 }
 ```
 
+To generate documentations, you need to implement the following things.
+- Extend `javax.ws.rs.core.Application`
+- Annotate `@OpenAPIDefinition`
+
 ## Demo
 
 ## Features
