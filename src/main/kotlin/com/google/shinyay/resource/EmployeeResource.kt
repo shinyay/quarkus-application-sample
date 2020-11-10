@@ -42,4 +42,8 @@ class EmployeeResource(val repository: EmployeeRepository) {
     fun findByFirstNameAndLastName(@PathParam firstName: String,
                                    @PathParam lastName: String) =
             repository.findByFirstNameAndLastName(firstName, lastName)
+
+    @GET
+    @Path("/salary/{salary}")
+    fun findBySalary(@PathParam salary: Int) = repository.findBySalary(salary)
 }
