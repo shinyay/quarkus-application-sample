@@ -1,14 +1,14 @@
 package com.google.shinyay.resource
 
 import com.google.shinyay.entity.Employee
+import com.google.shinyay.logger
 import com.google.shinyay.repository.EmployeeRepository
 import org.jboss.resteasy.annotations.jaxrs.PathParam
-import javax.ws.rs.Consumes
-import javax.ws.rs.GET
-import javax.ws.rs.Path
-import javax.ws.rs.Produces
+import javax.transaction.Transactional
+import javax.ws.rs.*
 
 import javax.ws.rs.core.MediaType
+import javax.ws.rs.core.Response
 
 @Path("/employees")
 @Produces(MediaType.APPLICATION_JSON)
@@ -21,4 +21,12 @@ class EmployeeResource(val repository: EmployeeRepository) {
     @GET
     @Path("/{id}")
     fun findById(@PathParam("id") id: Long): Employee? = repository.findById(id)
+
+    @POST
+    @Transactional
+    fun add(employee: Employee): Response {
+        logger.info(employee.toString())
+        repository.persist(employee)
+        return Response.ok(employee).status(201).build()
+    }
 }
