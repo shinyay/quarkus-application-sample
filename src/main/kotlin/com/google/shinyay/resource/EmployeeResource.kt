@@ -25,8 +25,15 @@ class EmployeeResource(val repository: EmployeeRepository) {
     @POST
     @Transactional
     fun add(employee: Employee): Response {
-        logger.info(employee.toString())
+        logger.info("ADD: $employee.toString()")
         repository.persist(employee)
         return Response.ok(employee).status(201).build()
+    }
+
+    @DELETE
+    @Path("/{id}")
+    fun delete(@PathParam id: Long) {
+        logger.info("DELETE: $id")
+        repository.deleteById(id)
     }
 }
