@@ -46,4 +46,9 @@ class EmployeeResource(val repository: EmployeeRepository) {
     @GET
     @Path("/salary/{salary}")
     fun findBySalary(@PathParam salary: Int) = repository.findBySalary(salary)
+
+    @GET
+    @Path("/salary-greater-than/{salary}")
+    fun findBySalaryGreaterThan(@PathParam salary: Int) =
+            repository.findBySalaryGreaterThan(salary)
 }
