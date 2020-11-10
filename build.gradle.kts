@@ -29,6 +29,7 @@ dependencies {
     implementation("io.quarkus:quarkus-container-image-jib")
     implementation("io.quarkus:quarkus-arc")
     testImplementation("io.quarkus:quarkus-junit5")
+    testImplementation("io.rest-assured:kotlin-extensions")
 }
 
 group = "com.google.shinyay"
