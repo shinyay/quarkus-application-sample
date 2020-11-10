@@ -164,11 +164,19 @@ dependencies {
 
 ### Metrics
 You can enable metrics collection by including the following dependency
+- `http://localhost:8080/metrics`
 
 ```kotlin
 dependencies {
     implementation("io.quarkus:quarkus-smallrye-metrics")
 }
+```
+
+#### Compatibility with Micrometer metrics format
+- application.properties
+
+```properties
+quarkus.smallrye-metrics.micrometer.compatibility=true
 ```
 
 ## Demo
