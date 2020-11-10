@@ -135,7 +135,7 @@ RESTEasy annotation makes you to specify value parameter without parameter for a
 
 ### OpenAPI Documentation
 Quarkus can generate OpenAPI v3 specification automatically to add `SmallRye OpenAPI extension` for dependency.
-The specification is available under path `/openapi`.
+The specification is available at `http://localhost:8080/openapi`.
 
 ```kotlin
 dependencies {
@@ -146,6 +146,21 @@ dependencies {
 To generate documentations, you need to implement the following things.
 - Extend `javax.ws.rs.core.Application`
 - Annotate `@OpenAPIDefinition`
+
+### Health Checks
+You can use built-in health check implementation by including the following dependency.
+You can access health check endpoints.
+- The application is up and running (**Kubernetes liveness probe**)
+  - `http://localhost:8080/health/live`
+- The application is ready to serve requests (**Kubernetes readiness probe**)
+  - `http://localhost:8080/health/ready`
+- Accumulating all health check procedures in the application
+  - `http://localhost:8080/health`
+```
+dependencies {
+    implementation("io.quarkus:quarkus-smallrye-health")
+}
+```
 
 ## Demo
 
