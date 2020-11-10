@@ -36,4 +36,10 @@ class EmployeeResource(val repository: EmployeeRepository) {
         logger.info("DELETE: $id")
         repository.deleteById(id)
     }
+
+    @GET
+    @Path("/first-name/{firstName}/last-name/{lastName}")
+    fun findByFirstNameAndLastName(@PathParam firstName: String,
+                                   @PathParam lastName: String) =
+            repository.findByFirstNameAndLastName(firstName, lastName)
 }
