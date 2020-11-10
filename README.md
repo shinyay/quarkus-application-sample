@@ -162,6 +162,15 @@ dependencies {
 }
 ```
 
+### Metrics
+You can enable metrics collection by including the following dependency
+
+```kotlin
+dependencies {
+    implementation("io.quarkus:quarkus-smallrye-metrics")
+}
+```
+
 ## Demo
 
 ## Features
