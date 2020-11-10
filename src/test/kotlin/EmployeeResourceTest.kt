@@ -8,6 +8,13 @@ import org.junit.jupiter.api.Test
 class EmployeeResourceTest {
 
     @Test
+    fun testGetAll() {
+        given().get("/employees")
+                .then()
+                .statusCode(200)
+    }
+
+    @Test
     fun testAddEmployee() {
         val employee = Employee(
                 firstName = "Alice",
