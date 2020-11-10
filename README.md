@@ -181,6 +181,13 @@ quarkus.smallrye-metrics.micrometer.compatibility=true
 
 ### Testing
 You can use a testing framework for Quarkus with `@QueakusTest` annotation.
+The following dependencies makes it to use testing framework.
+
+```kotlin
+dependencies {
+    testImplementation("io.quarkus:quarkus-junit5")
+}
+```
 
 ## Demo
 
