@@ -28,6 +28,7 @@ dependencies {
     implementation("io.quarkus:quarkus-kubernetes-config")
     implementation("io.quarkus:quarkus-container-image-jib")
     implementation("io.quarkus:quarkus-arc")
+    implementation("io.quarkus:quarkus-container-image-jib")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:kotlin-extensions")
 }
