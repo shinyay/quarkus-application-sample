@@ -198,6 +198,8 @@ dependencies {
 ```
 
 #### Kubernetes configuration
+- [QUARKUS - KUBERNETES EXTENSION](https://quarkus.io/guides/deploying-to-kubernetes)
+
 ```properties
 quarkus.kubernetes.labels.app-type=demo
 quarkus.kubernetes.annotations.app-type=demo
