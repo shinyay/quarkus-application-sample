@@ -207,6 +207,20 @@ quarkus.kubernetes.env.secrets=postgres-secret
 quarkus.kubernetes.env.configmaps=postgres-config
 ```
 
+#### ConfigMap
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  labels:
+    app: postgres
+data:
+  POSTGRES_DB: quarkus
+  POSTGRES_USER: quarkus
+  POSTGRES_HOST: postgres
+```
+
 ## Demo
 
 ## Features
