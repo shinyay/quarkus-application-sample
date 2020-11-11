@@ -189,6 +189,14 @@ dependencies {
 }
 ```
 
+### Kubernetes and Jib
+```kotlin
+dependencies {
+    implementation("io.quarkus:quarkus-container-image-jib")
+    implementation("io.quarkus:quarkus-kubernetes")
+}
+```
+
 ## Demo
 
 ## Features
