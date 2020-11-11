@@ -221,6 +221,18 @@ data:
   POSTGRES_HOST: postgres
 ```
 
+#### Secret
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: postgres-secret
+  labels:
+    app: postgres
+data:
+  POSTGRES_PASSWORD: YWRtaW4xMjM=
+```
+
 ## Demo
 
 ## Features
