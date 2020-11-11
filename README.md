@@ -197,6 +197,14 @@ dependencies {
 }
 ```
 
+#### Kubernetes configuration
+```properties
+quarkus.kubernetes.labels.app-type=demo
+quarkus.kubernetes.annotations.app-type=demo
+quarkus.kubernetes.env.secrets=postgres-secret
+quarkus.kubernetes.env.configmaps=postgres-config
+```
+
 ## Demo
 
 ## Features
