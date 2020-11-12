@@ -197,6 +197,20 @@ dependencies {
 }
 ```
 
+#### Jib for Container Image Options
+
+|Property|Description|
+|--------|-----------|
+|quarkus.container-image.build|Whether or not a image build will be performed<br>Default: false|
+|quarkus.container-image.push|Whether or not an image push will be performed<br>Default: false|
+|quarkus.container-image.group|The group the container image will be part of <br>DockerHub: username<br>GCR: Propject Name|
+|quarkus.container-image.name|The name of the container image<br>>If not set defaults to the application name|
+|quarkus.container-image.tag|The tag of the container image. If not set defaults to the application version|
+|quarkus.container-image.registry|The container registry to use<br>Without this: Docker Hub<br>GCP: gcr.io|
+|quarkus.container-image.username|The username to use to authenticate with the registry |
+|quarkus.container-image.password|The password to use to authenticate with the registry|
+|quarkus.container-image.builder|docker, jib, s2i|
+
 #### Kubernetes configuration
 - [QUARKUS - KUBERNETES EXTENSION](https://quarkus.io/guides/deploying-to-kubernetes)
 
