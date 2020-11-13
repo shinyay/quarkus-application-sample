@@ -41,6 +41,10 @@ quarkus.datasource.password=password
 quarkus.datasource.jdbc.url=jdbc:h2:mem:testdb
 ```
 
+|Property|Description|
+|--------|-----------|
+|quarkus.hibernate-orm.database.generation|none<br>create<br>drop-and-create|
+
 ### Entity with Panache
 Entity class extends `PanacheEntity` which has already defined *ID*.
 Therefore, you don't have to define id field at your entity class.
